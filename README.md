@@ -1,0 +1,1 @@
+# GDE_Feladat_A
