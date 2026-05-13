@@ -8,4 +8,5 @@ class szemely_auto(Auto):
         self.extra = [""]
 
 
-    
+    def info(self) -> str:
+        return f"Személyautó: {self.tipus} ({self.rendszam}), {self.berleti_dij} Ft/nap, ülések: {self.extra}"
