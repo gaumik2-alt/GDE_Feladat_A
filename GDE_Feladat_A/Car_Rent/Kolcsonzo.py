@@ -1,7 +1,8 @@
-class kolcsonzo:
-    def __init__(self, neve, cime):
+
+
+class Kolcsonzo:
+    def __init__(self, neve):
         self._neve = neve
-        self._cime = cime
         self._autok = []
 
     @property
@@ -9,12 +10,21 @@ class kolcsonzo:
         return self._neve
     
     @property
-    def cime(self):
-        return self._cime
-    
-    @property
     def autok(self):
         for auto in self._autok:
-            print(f"Bérelhető járművek: {autok._autok}")
+            print(f"Bérelhető járművek: {auto.rendszam} , Státusz: {auto.status}")
 
-    
+    @autok.setter
+    def autok(self, uj_auto):
+        self._autok.append(uj_auto)
+
+ 
+    def kiberel_rendszam(self, rendszam):
+        for auto in self._autok:
+            if auto.rendszam == rendszam:
+                auto.kiberel_auto()
+
+    def visszaad_rendszam(self, rendszam):
+        for auto in self._autok:
+            if auto.rendszam == rendszam:
+                auto.visszaad_auto()
