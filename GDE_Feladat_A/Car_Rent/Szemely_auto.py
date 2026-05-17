@@ -35,7 +35,7 @@ class szemely_auto(Auto):
             self._foglalt = True
             print(f"A(z) {self.rendszam} rendszámú személyautó kibérelve.")
         else:
-            print("Hiba: ez a szoba már foglalt!")
+            print("Hiba: ez az autó már foglalt!")
     
       
     def visszaad_auto(self):    # nincs kiadva
@@ -43,4 +43,4 @@ class szemely_auto(Auto):
             self._foglalt = False
             print(f"A(z) {self.rendszam} rendszámú személyautó visszaadva.")
         else:
-            print("Hiba: ez a szoba nem foglalt!")
+            print("Hiba: ez az autó nem foglalt!")

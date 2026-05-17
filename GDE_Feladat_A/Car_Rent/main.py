@@ -40,15 +40,18 @@ class Foglalas:
                 self._kolcsonzo.autok
             elif menu == "2":
                 kepernyo_torles()
-                rendszam = input("Add meg a rendszámot:")
+                print("--- Bérelhető autók listája ---")
+                # self._kolcsonzo.autok()
+                rendszam = input("Add meg a foglalni kívánt autó rendszámát (pl.:ABC-001):")
                 self._kolcsonzo.kiberel_rendszam(rendszam)
             elif menu == "3":
                 kepernyo_torles()
-                rendszam = input("Add meg a rendszámot:")
+                rendszam = input("Add meg a törlendő foglalásban érintett autó rendszámát (pl.:ABC-001):")
                 self._kolcsonzo.visszaad_rendszam(rendszam)
             elif menu == "4":
+                kepernyo_torles()
+                print("--- Sikeres kilépés ---")
                 break
-
 
 
 foglalasok = Foglalas()

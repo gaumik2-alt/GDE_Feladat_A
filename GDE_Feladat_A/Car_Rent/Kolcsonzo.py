@@ -12,7 +12,12 @@ class Kolcsonzo:
     @property
     def autok(self):
         for auto in self._autok:
-            print(f"Bérelhető járművek: {auto.rendszam} , Státusz: {auto.status}")
+            print(f"Rendszám: {auto.rendszam} , Státusz: {auto.status}")
+
+    def szabad_autok(self):
+        for auto in self.osszes_auto:
+            if auto.foglalt == False:  
+                print(auto)
 
     @autok.setter
     def autok(self, uj_auto):
