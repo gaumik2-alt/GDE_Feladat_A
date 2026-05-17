@@ -9,5 +9,10 @@ class Auto(ABC):
         self._tipus = tipus
         self._berleti_dij = berleti_dij
         self._foglalt = False
-
     
+    def __str__(self):
+        if self._foglalt:
+            statusz_szoveg = "Foglalt"
+        else:
+            statusz_szoveg = "Szabad"
+        return f"Rendszám: {self._rendszam:<9} | Típus: {self._tipus:<16} | Ár: {self._berleti_dij:<10} Ft/nap | Státusz: {statusz_szoveg}"

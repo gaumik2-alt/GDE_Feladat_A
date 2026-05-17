@@ -5,7 +5,7 @@ from Auto import Auto
 class teher_auto(Auto):
     def __init__(self, rendszam, tipus, berleti_dij):
         super().__init__(rendszam, tipus, berleti_dij)
-        self.tonna = [""]
+        self._tonna = [""]
 
 
     @property
@@ -21,17 +21,26 @@ class teher_auto(Auto):
         return self._berleti_dij
 
     @property
+    def tonna(self):
+        return self._tonna
+    
+    @property
     def status(self):
         return self._foglalt
     
     def kiberel_auto(self):
-        # Egyelőre csak ennyit csinál, hogy ne kapj hibát
-        print(f"A(z) {self.rendszam} rendszámú személyautó kibérelve.") 
-        return True
+        if not self._foglalt:
+            self._foglalt = True
+            print(f"A(z) {self.rendszam} rendszámú személyautó kibérelve.")
+        else:
+            print("Hiba: ez az autó már foglalt!")
 
     def visszaad_auto(self):
-        print(f"A(z) {self.rendszam} rendszámú személyautó visszaadva.")
-        return True
+        if self._foglalt:
+            self._foglalt = False
+            print(f"A(z) {self.rendszam} rendszámú személyautó visszaadva.")
+        else:
+            print("Hiba: ez az autó nem foglalt!")
     
 
     #def info(self) -> str:

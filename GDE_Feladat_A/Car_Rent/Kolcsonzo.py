@@ -4,6 +4,7 @@ class Kolcsonzo:
     def __init__(self, neve):
         self._neve = neve
         self._autok = []
+        self._berles = []
 
     @property
     def neve(self):
@@ -11,8 +12,9 @@ class Kolcsonzo:
     
     @property
     def autok(self):
-        for auto in self._autok:
-            print(f"Rendszám: {auto.rendszam} , Státusz: {auto.status}")
+        return self._autok
+        # for auto in self._autok:
+        #    print(f"Rendszám: {auto.rendszam} , Státusz: {auto.status}")
 
     def szabad_autok(self):
         for auto in self.osszes_auto:

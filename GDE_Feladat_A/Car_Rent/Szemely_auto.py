@@ -7,7 +7,6 @@ class szemely_auto(Auto):
         super().__init__(rendszam, tipus, berleti_dij)
         self._extra = [""]
 
-   
 
     @property
     def rendszam(self):
