@@ -1,5 +1,5 @@
-import os
-from datetime import datetime
+import os                       # Terminál törlés (cls)
+from datetime import datetime   # dátumformátum ellenőrzés
 
 from Kolcsonzo import Kolcsonzo
 from Szemely_auto import szemely_auto
@@ -42,7 +42,7 @@ class Foglalas:
 
             if menu == "1":
                 kepernyo_torles()
-                print("--- Bérelhető Járművek listája ---")
+                print("--- Járművek listája ---")
                 #self._kolcsonzo.autok
                 for auto in self._kolcsonzo.autok:
                     print(auto)
@@ -67,7 +67,7 @@ class Foglalas:
                             print(f"megtalalt {talalt_auto}")
                             self._kolcsonzo.kiberel_rendszam(rendszam)
                             uj_berles = Berles(talalt_auto, datum)
-                        self._kolcsonzo._berles.append(uj_berles)
+                            self._kolcsonzo._berles.append(uj_berles)
                 except ValueError:
                     print("\nHiba: Érvénytelen dátum formátum! Kérlek, használj éééé-hh-nn formátumot (pl. 2026-05-20).")
 

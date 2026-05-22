@@ -14,5 +14,5 @@ class Berles:
         return self._datum
 
     def __str__(self):
-        # Amikor kilistázzuk a foglalásokat, így fog szépen megjelenni:
+        # foglalások listázásához:
         return f"Dátum: {self._datum} | {self._auto}"
