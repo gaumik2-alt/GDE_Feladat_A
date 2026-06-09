@@ -1,6 +1,7 @@
 import os                       # Terminál törlés (cls)
 from datetime import datetime   # dátumformátum ellenőrzés
 
+
 from Kolcsonzo import Kolcsonzo
 from Szemely_auto import szemely_auto
 from Teher_auto import teher_auto
